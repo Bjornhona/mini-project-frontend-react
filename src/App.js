@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import NavBar from './components/NavBar';
+import HomePage from './pages/HomePage';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Github from './pages/Github';
+import WebdevInfo from './pages/WebdevInfo';
+import ApiService from './lib/ApiService';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Switch>
+              <Route exact path={'/'} component={HomePage} />
+              <Route exact path={'/login'} component={Login} />
+              <Route path={'/signup'} component={Signup} />
+              <Route path={'/github'} component={Github} />
+              <Route path={'/webdevinfo'} component={WebdevInfo} />
+              <Route path={'/webdevs'} lib={ApiService} />
+              <Route path={'/webdevs/id'} lib={ApiService} />
+            </Switch>
+        </div>
+      </Router>
     );
   }
 }

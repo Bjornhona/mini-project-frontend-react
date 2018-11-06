@@ -30,3 +30,72 @@
     transform: rotate(360deg);
   }
 }
+
+/* ---- typography ---- */
+
+h3 {
+  padding-bottom: 20px;
+}
+
+/* ---- components ---- */
+
+.button {
+  background-color: cyan;
+  border: none;
+  border-radius: 30px;
+  color: darkslateblue;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 15px;
+}
+
+.button-container {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ---- navbar ---- */
+
+.nav-bar {
+  background-color: darkslateblue;
+  color: white;
+  padding: 30px 0;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: white;
+  padding: 10px 30px;
+  margin: 5px;
+  border: 1px solid white;
+}
+
+/* ---- form ---- */
+
+.field-wrap {
+  padding: 15px;
+}
+
+.input-field {
+  border: 1px solid darkslateblue;
+  border-radius: 30px;
+  padding: 15px 30px;
+  margin: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- facts webdevs ---- */
+
+.container {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid darkslateblue;
+  box-shadow: 3px 3px 10px grey;
+  padding: 20px;
+}
